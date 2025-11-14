@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  @font-face {
+    font-family: "IRANSans";
+    src: local("IRANSans") url("../src/fonts/IRANSans/IRANSans.ttf");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IRANSans bold";
+    src: url("../src/fonts/IRANSans/IRANSans_Bold.ttf");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IRANSans medium";
+    src: url("../src/fonts/IRANSans/IRANSans_Medium.ttf");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "laleZar";
+    src: url("../src/fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf");
+  }
+}
