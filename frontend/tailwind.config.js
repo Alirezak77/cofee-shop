@@ -4,6 +4,7 @@ module.exports= {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode:'class',
   theme: {
     extend: {
       colors: {
@@ -25,6 +26,9 @@ module.exports= {
         "IranSansBold" : "IRANSans bold",
         "IransSansMedium" : "IRANSans medium",
         "LaleZar" : "laleZar",
+      },
+      letterSpacing:{
+        "tightest" : "-0.065em"
       }
     },
   },

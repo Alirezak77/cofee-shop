@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.body{
+  direction: rtl;
+}
+
 @layer base{
   @font-face {
     font-family: "IRANSans";
