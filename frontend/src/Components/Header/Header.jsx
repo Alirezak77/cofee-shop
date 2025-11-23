@@ -53,36 +53,30 @@ export default function Header() {
       <header className="bg-black/50 fixed top-5 right-0 left-0 w-[90%] h-24 pr-10 pl-4 py-5 mx-auto flex rounded-3xl items-center backdrop-blur-sm">
         <div className="flex justify-between items-center w-full">
           {/* logo and menu */}
-          <nav className="flex gap-x-9 items-center text-xl text-gray-300 tracking-tightest">
+          <nav className="flex h-14 gap-x-9 items-center text-xl text-gray-300 tracking-tightest">
             <div>
               <img src="./images/app-logo.png" alt="" />
             </div>
-            <ul className="flex gap-x-9 tracking-tightest">
-              <li className='text-orange-200'>
+            <ul className="flex h-full gap-x-9 tracking-tightest  child:leading-[56px]">
+              <li className="text-orange-200">
                 <a href="#">صفحه اصلی</a>
               </li>
-              <li>
+              <li className="relative group">
                 <a href="#">فروشگاه</a>
-                <ul className="hidden">
-                  <li>
-                    <a href="">قهوه ویژه</a>
-                  </li>
-                  <li>
-                    <a href="">در سطح جهانی</a>
-                  </li>
-                  <li>
-                    <a href="">قهوه درجه یک</a>
-                  </li>
-                  <li>
-                    <a href="">ترکیبات تجاری</a>
-                  </li>
-                  <li>
-                    <a href="">کپسول قهوه</a>
-                  </li>
-                  <li>
-                    <a href="">قهوه برزیلی</a>
-                  </li>
-                </ul>
+                <div className="absolute w-52 p-6 leading-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible space-y-4 top-full bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white 
+                transition-all rounded-2xl border-t-[3px] tracking-normal shadow-normal border-t-orange-300 child:block child:transition-colors child-hover:text-orange-300">
+                  <a href="">قهوه ویژه</a>
+
+                  <a href="">در سطح جهانی</a>
+
+                  <a href="">قهوه درجه یک</a>
+
+                  <a href="">ترکیبات تجاری</a>
+
+                  <a href="">کپسول قهوه</a>
+
+                  <a href="">قهوه برزیلی</a>
+                </div>
               </li>
               <li>
                 <a href="#">دیکشنری</a>
@@ -101,8 +95,8 @@ export default function Header() {
 
           {/* theme and login link */}
           <div className="flex items-center gap-x-5 text-orange-200">
-            <div className='gap-x-5 flex'>
-              <div>
+            <div className="gap-x-5 flex">
+              <div className="py-3">
                 <svg className="w-6 h-6">
                   <use xlinkHref="#shop"></use>
                 </svg>
@@ -114,7 +108,7 @@ export default function Header() {
               </div>
             </div>
 
-            <span className='block w-px h-14 bg-white/20'></span>
+            <span className="block w-px h-14 bg-white/20"></span>
 
             <a href="" className="flex gap-x-5 tracking-tightest">
               <svg className="h-6 w-6 rotate-180">
