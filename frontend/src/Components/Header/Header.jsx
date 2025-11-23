@@ -50,7 +50,7 @@ export default function Header() {
         </symbol>
       </svg>
 
-      <header className="bg-black/50 fixed top-5 right-0 left-0 w-[90%] h-24 pr-10 pl-4 py-5 mx-auto flex rounded-3xl items-center">
+      <header className="bg-black/50 fixed top-5 right-0 left-0 w-[90%] h-24 pr-10 pl-4 py-5 mx-auto flex rounded-3xl items-center backdrop-blur-sm">
         <div className="flex justify-between items-center w-full">
           {/* logo and menu */}
           <nav className="flex gap-x-9 items-center text-xl text-gray-300 tracking-tightest">

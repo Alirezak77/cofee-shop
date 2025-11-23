@@ -28,5 +28,6 @@
   body{
   direction: rtl;
   background-image: url("/images/headerBgDesktop.png");
+  background-repeat: no-repeat;
 }
 }
