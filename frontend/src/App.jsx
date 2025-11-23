@@ -1,13 +1,15 @@
-
 import './App.css'
-import Header from './Components/Header/Header'
+// import Landing from './pages/landing/Landing'
+import routes from './routes'
+import { useRoutes } from 'react-router-dom';
 
 function App() {
-  
+  const router = useRoutes(routes)
 
   return (
     <>
-      <Header/>
+    {/* <Landing/> */}
+      {router}
     </>
   )
 }
