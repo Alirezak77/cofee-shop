@@ -1,18 +1,20 @@
 import React from "react";
 import MobileHeader from "./MobileHeader";
+import { toggleTheme } from "../../utils/theme";
 
 export default function Header() {
-  const darkMode = () => {
-    const html = document.documentElement;
+  // const darkMode = () => {
+  //   const html = document.documentElement;
 
-    if (html.classList.contains("dark")) {
-      html.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      html.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-  };
+  //   if (html.classList.contains("dark")) {
+  //     html.classList.remove("dark");
+  //     localStorage.setItem("theme", "light");
+  //   } else {
+  //     html.classList.add("dark");
+  //     localStorage.setItem("theme", "dark");
+  //   }
+  // };
+
   return (
     <>
       <svg className="hidden">
@@ -250,7 +252,7 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              <div className="cursor-pointer" onClick={darkMode}>
+              <div className="cursor-pointer" onClick={toggleTheme}>
                 <svg className="h-6 w-6 block dark:hidden">
                   <use xlinkHref="#moon"></use>
                 </svg>
