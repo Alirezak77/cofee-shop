@@ -7,7 +7,7 @@
 @layer base{
   @font-face {
     font-family: "IRANSans";
-    src: local("IRANSans") url("../src/fonts/IRANSans/IRANSans.ttf");
+    src: url("../src/fonts/IRANSans/IRANSans.ttf");
     font-display: swap;
   }
   @font-face {
@@ -27,7 +27,8 @@
 
   body{
   direction: rtl;
-  background-image: url("/images/headerBgDesktop.png");
+  background-image: url("/images/headerBgDesktop.webp");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 }

@@ -75,6 +75,22 @@ export default function Header() {
             />
           </svg>
         </symbol>
+        <symbol>
+          <svg
+            id="arrow-left"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5 8.25 12l7.5-7.5"
+            />
+          </svg>
+        </symbol>
       </svg>
 
       <header className="bg-black/50 fixed top-5 right-0 left-0 w-[90%] h-24 pr-10 pl-4 py-5 mx-auto flex rounded-3xl items-center backdrop-blur-sm">
@@ -91,7 +107,7 @@ export default function Header() {
               <li className="relative group">
                 <a href="#">فروشگاه</a>
                 <div
-                  className="absolute w-52 p-6 leading-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible space-y-4 top-full bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white 
+                  className="absolute delay-75 w-52 p-6 leading-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible space-y-4 top-full bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white 
                 transition-all rounded-2xl border-t-[3px] tracking-normal shadow-normal border-t-orange-300 child:inline-block child:transition-colors child-hover:text-orange-300"
                 >
                   <a href="">قهوه ویژه</a>
@@ -125,10 +141,92 @@ export default function Header() {
           {/* theme and login link */}
           <div className="flex items-center gap-x-5 text-orange-200">
             <div className="gap-x-5 flex items-center">
-              <div className="py-3">
-                <svg className="w-6 h-6">
-                  <use xlinkHref="#shop"></use>
-                </svg>
+              <div className="relative group">
+                <div className="py-3">
+                  <svg className="w-6 h-6">
+                    <use xlinkHref="#shop"></use>
+                  </svg>
+                </div>
+                {/* shop card */}
+                <div
+                  className="absolute w-[400px] top-full left-0 p-5 invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white dark:bg-zinc-700 
+                 transition-all rounded-2xl border-t-[3px] border-t-orange-300 delay-75 "
+                >
+                  {/* shop card header */}
+                  <div className="flex items-center justify-between tracking-tighter text-xs">
+                    <span className="text-gray-400">1 مورد</span>
+                    <a href="" className="flex items-center text-orange-300">
+                      مشاهده سید خرید
+                      <svg className="h-4 w-4">
+                        <use href="#arrow-left"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  {/* shop card body */}
+                  <div className="mt-5 pb-5 border-b border-b-gray-300 dark:border-b-white/10 divide-y divide-gray-400 dark:divide-white/10 child:py-5">
+                    <div className="flex ">
+                      <img
+                        src="/images/products/p1.png"
+                        className="w-[120px] h-[120px]"
+                      />
+                      <div>
+                        <h4 className="text-zinc-400 text-base font-bold">
+                          قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                        </h4>
+                        <div className="mt-5">
+                          <span className="text-teal-600 dark:text-emerald-500 text-sm">
+                            14.500 تومان تخفیف
+                          </span>
+                          <div className="text-zinc-600 dark:text-white">
+                            17.500
+                            <span>تومان</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex ">
+                      <img
+                        src="/images/products/p1.png"
+                        className="w-[120px] h-[120px]"
+                      />
+                      <div>
+                        <h4 className="text-zinc-400 text-base font-bold">
+                          قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                        </h4>
+                        <div className="mt-5">
+                          <span className="text-teal-600 dark:text-emerald-500 text-sm">
+                            14.500 تومان تخفیف
+                          </span>
+                          <div className="text-zinc-600 dark:text-white">
+                            17.500
+                            <span>تومان</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* shop card footer */}
+                  <div className="flex justify-between items-center mt-5">
+                    <div>
+                      <span className="text-gray-400 dark:text-emerald-500 text-sm">
+                        مبلغ قابل پرداخت
+                      </span>
+                      <div className="text-zinc-700 dark:text-white text-2xl">
+                        350.000
+                        <span className="text-sm mr-2">تومان</span>
+                      </div>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        className="p-4 bg-teal-600 dark:bg-emerald-500 hover:bg-teal-700 dark:hover:bg-teal-700 transition-colors text-white rounded-xl "
+                      >
+                        ثبت سفارش
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="cursor-pointer" onClick={darkMode}>
                 <svg className="h-6 w-6 block dark:hidden">
