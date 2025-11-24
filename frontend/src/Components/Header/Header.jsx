@@ -1,6 +1,17 @@
 import React from "react";
 
 export default function Header() {
+  const darkMode = () => {
+    const html = document.documentElement;
+
+    if (html.classList.contains("dark")) {
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
   return (
     <>
       <svg className="hidden">
@@ -48,6 +59,22 @@ export default function Header() {
             d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
           />
         </symbol>
+        <symbol>
+          <svg
+            id="sun"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+            />
+          </svg>
+        </symbol>
       </svg>
 
       <header className="bg-black/50 fixed top-5 right-0 left-0 w-[90%] h-24 pr-10 pl-4 py-5 mx-auto flex rounded-3xl items-center backdrop-blur-sm">
@@ -63,8 +90,10 @@ export default function Header() {
               </li>
               <li className="relative group">
                 <a href="#">فروشگاه</a>
-                <div className="absolute w-52 p-6 leading-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible space-y-4 top-full bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white 
-                transition-all rounded-2xl border-t-[3px] tracking-normal shadow-normal border-t-orange-300 child:block child:transition-colors child-hover:text-orange-300">
+                <div
+                  className="absolute w-52 p-6 leading-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible space-y-4 top-full bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white 
+                transition-all rounded-2xl border-t-[3px] tracking-normal shadow-normal border-t-orange-300 child:inline-block child:transition-colors child-hover:text-orange-300"
+                >
                   <a href="">قهوه ویژه</a>
 
                   <a href="">در سطح جهانی</a>
@@ -95,15 +124,18 @@ export default function Header() {
 
           {/* theme and login link */}
           <div className="flex items-center gap-x-5 text-orange-200">
-            <div className="gap-x-5 flex">
+            <div className="gap-x-5 flex items-center">
               <div className="py-3">
                 <svg className="w-6 h-6">
                   <use xlinkHref="#shop"></use>
                 </svg>
               </div>
-              <div>
-                <svg className="h-6 w-6">
+              <div className="cursor-pointer" onClick={darkMode}>
+                <svg className="h-6 w-6 block dark:hidden">
                   <use xlinkHref="#moon"></use>
+                </svg>
+                <svg className="h-6 w-6 hidden dark:block">
+                  <use href="#sun"></use>
                 </svg>
               </div>
             </div>
