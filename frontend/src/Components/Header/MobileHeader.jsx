@@ -4,38 +4,75 @@ import { toggleTheme } from "../../utils/theme";
 export default function MobileHeader() {
   return (
     <>
-    <svg className="hidden">
-
+      <svg className="hidden">
         <symbol>
-            <svg id="shop-bag" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-</svg>
-
+          <svg
+            id="shop-bag"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+            />
+          </svg>
         </symbol>
 
         <symbol>
-            <svg id="chat" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-</svg>
-
+          <svg
+            id="chat"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+            />
+          </svg>
         </symbol>
 
         <symbol>
-            <svg id="about" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46" />
-</svg>
-
+          <svg
+            id="about"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"
+            />
+          </svg>
         </symbol>
 
         <symbol>
-            <svg id="phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-</svg>
-
+          <svg
+            id="phone"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+            />
+          </svg>
         </symbol>
-    </svg>
-
-
+      </svg>
 
       <div className=" flex md:hidden items-center justify-between h-16 px-5 bg-white dark:bg-zinc-700">
         {/* nav icon */}
@@ -100,65 +137,68 @@ export default function MobileHeader() {
             </svg>
           </div>
 
-
           {/* main menu */}
           <div>
-            <ul className="child:flex child:items-center child:gap-x-2 child:my-4 child:text-gray-500 child:dark:text-white">
-                <li>
-                    <svg  className="w-4 h-4">
-                        <use href="#shop-bag"></use>
-                    </svg>
-                    فروشگاه
-                </li>
-                <li>
-                    <svg  className="w-4 h-4">
-                        <use href="#chat"></use>
-                    </svg>
-                    دیکشنری
-                </li>
-                <li>
-                    <svg  className="w-4 h-4">
-                        <use href="#about"></use>
-                    </svg>
-                    درباره ما
-                </li>
-                <li>
-                    <svg  className="w-4 h-4">
-                        <use href="#phone"></use>
-                    </svg>
-                    تماس با ما
-                </li>
+            <ul className=" child:my-4 child:text-gray-500 child:dark:text-white">
+              <li>
+                <div className="flex items-center">
+                  <svg className="w-4 h-4 ml-2">
+                    <use href="#shop-bag"></use>
+                  </svg>
+                  فروشگاه
+                </div>
+                <div className="pr-5 flex flex-col space-y-2 mt-3 text-gray-400">
+                  <a href="">قهوه ویژه</a>
+                  <a href="">ویژه در سطح جهانی</a>
+                  <a href="">ترکیبات تجاری</a>
+                  <a href="">کپسول قهوه</a>
+                  <a href="">قهوه زینو برزیلی</a>
+                </div>
+              </li>
+              <li className="flex items-center gap-x-2">
+                <svg className="w-4 h-4">
+                  <use href="#chat"></use>
+                </svg>
+                دیکشنری
+              </li>
+              <li className="flex items-center gap-x-2">
+                <svg className="w-4 h-4">
+                  <use href="#about"></use>
+                </svg>
+                درباره ما
+              </li>
+              <li className="flex items-center gap-x-2">
+                <svg className="w-4 h-4">
+                  <use href="#phone"></use>
+                </svg>
+                تماس با ما
+              </li>
             </ul>
           </div>
-
-
-
-
-
 
           {/* footer menu */}
           <div className=" mt-4 pt-5 border-t border-t-gray-300 child:flex child:gap-x-2 child:text-orange-300">
             <div className="">
-                <svg className="h-6 w-6 rotate-180">
-                    <use href="#arrow"></use>
-                </svg>
-                <a href="">ورود | ثبت نام</a>
+              <svg className="h-6 w-6 rotate-180">
+                <use href="#arrow"></use>
+              </svg>
+              <a href="">ورود | ثبت نام</a>
             </div>
             <div className="my-4" onClick={toggleTheme}>
-                <svg className="block dark:hidden w-6 h-6">
-                    <use href="#moon"></use>
-                </svg>
-                <svg className="hidden dark:block w-6 h-6">
-                    <use href="#sun"></use>
-                </svg>
-                <span className="dark:hidden">تم تیره</span>
-                <span className="hidden dark:block">تم روشن</span>
+              <svg className="block dark:hidden w-6 h-6">
+                <use href="#moon"></use>
+              </svg>
+              <svg className="hidden dark:block w-6 h-6">
+                <use href="#sun"></use>
+              </svg>
+              <span className="dark:hidden">تم تیره</span>
+              <span className="hidden dark:block">تم روشن</span>
             </div>
             <div>
-                <svg className="w-6 h-6">
-                    <use href="#shop"></use>
-                </svg>
-                <a href="">سبد خرید</a>
+              <svg className="w-6 h-6">
+                <use href="#shop"></use>
+              </svg>
+              <a href="">سبد خرید</a>
             </div>
           </div>
         </div>
