@@ -93,14 +93,14 @@ export default function Header() {
         </symbol>
       </svg>
 
-      <header className="bg-black/50 fixed top-5 right-0 left-0 w-[90%] h-24 pr-10 pl-4 py-5 mx-auto flex rounded-3xl items-center backdrop-blur-sm">
+      <header className="bg-black/50 fixed top-5 right-0 left-0 hidden md:flex w-[98%] lg:w-[90%] h-24 px-5 lg:px-10 py-5 mx-auto rounded-3xl items-center backdrop-blur-sm">
         <div className="flex justify-between items-center w-full">
           {/* logo and menu */}
-          <nav className="flex h-14 gap-x-9 items-center text-xl text-gray-300 tracking-tightest">
-            <div>
+          <nav className="flex h-14 gap-x-5 text-sm lg:gap-x-9 items-center lg:text-xl text-gray-300 tracking-tightest">
+            <div className="shrink-0">
               <img src="./images/app-logo.png" alt="" />
             </div>
-            <ul className="flex h-full gap-x-9 tracking-tightest  child:leading-[56px]">
+            <ul className="flex h-full gap-x-5 lg:gap-x-9 tracking-tightest  child:leading-[56px]">
               <li className="text-orange-200">
                 <a href="#">صفحه اصلی</a>
               </li>
@@ -139,7 +139,7 @@ export default function Header() {
           </nav>
 
           {/* theme and login link */}
-          <div className="flex items-center gap-x-5 text-orange-200">
+          <div className="flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-10 text-orange-200">
             <div className="gap-x-5 flex items-center">
               <div className="relative group">
                 <div className="py-3">
@@ -149,8 +149,8 @@ export default function Header() {
                 </div>
                 {/* shop card */}
                 <div
-                  className="absolute w-[400px] top-full left-0 p-5 invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white dark:bg-zinc-700 
-                 transition-all rounded-2xl border-t-[3px] border-t-orange-300 delay-75 "
+                  className="absolute w-[400px] max-h-[496px] overflow-y-auto top-full left-0 p-5 invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white dark:bg-zinc-700 
+                 transition-all rounded-2xl border-t-[3px] border-t-orange-300 delay-75"
                 >
                   {/* shop card header */}
                   <div className="flex items-center justify-between tracking-tighter text-xs">
@@ -244,7 +244,7 @@ export default function Header() {
               <svg className="h-6 w-6 rotate-180">
                 <use xlinkHref="#arrow"></use>
               </svg>
-              ورود/ثبت نام
+              <span className="hidden xl:inline-block">ورود/ثبت نام</span>
             </a>
           </div>
         </div>
