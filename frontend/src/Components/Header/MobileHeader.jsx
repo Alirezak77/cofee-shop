@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { toggleTheme } from "../../utils/theme";
 
 export default function MobileHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <svg className="hidden">
@@ -76,7 +78,7 @@ export default function MobileHeader() {
 
       <div className=" flex md:hidden items-center justify-between h-16 px-5 bg-white dark:bg-zinc-700">
         {/* nav icon */}
-        <div>
+        <div onClick={() => setIsOpen(true)}>
           <svg className="w-6 h-6">
             <use href="#bars-3"></use>
           </svg>
@@ -97,7 +99,11 @@ export default function MobileHeader() {
         </div>
 
         {/*header menu */}
-        <div className="w-64 fixed min-h-screen top-0 right-0 bottom-0 px-4 bg-white dark:bg-zinc-700">
+        <div
+          className={`w-64 fixed min-h-screen top-0 right-0 bottom-0 px-4 bg-white dark:bg-zinc-700 transition-all z-20 ${
+            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
           <div className="flex justify-between items-center pt-3 pb-5 border-b border-b-gray-300">
             <div className="text-orange-300 flex items-center gap-x-3">
               <svg className="h-10 w-[41px]">
@@ -119,22 +125,25 @@ export default function MobileHeader() {
                 <use href="#logo-type"></use>
               </svg>
             </div>
-            <svg className="h-5 w-5">
-              <svg
-                id="cancele"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
+            {/* close menu */}
+            <div onClick={()=>setIsOpen(false)}>
+              <svg className="h-5 w-5 dark:text-white">
+                <svg
+                  id="cancele"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
               </svg>
-            </svg>
+            </div>
           </div>
 
           {/* main menu */}
@@ -202,6 +211,8 @@ export default function MobileHeader() {
             </div>
           </div>
         </div>
+
+        <div className={`md:hidden fixed w-full h-full bg-black/30 z-10 inset-0 transition-all ${isOpen ? 'visible opacity-100' : 'opacity-0 invisible'}`}></div>
       </div>
     </>
   );
