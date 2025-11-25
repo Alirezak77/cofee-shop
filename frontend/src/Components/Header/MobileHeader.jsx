@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { toggleTheme } from "../../utils/theme";
+import ShopCard from "../Shop-card/ShopCard";
 
 export default function MobileHeader() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [sidBarIsOpen, setSidBarIsOpen] = useState(false);
+  const [shopMenuIsOpen , setShopMenuIsOpen ] = useState(false)
 
   return (
     <>
@@ -74,11 +76,27 @@ export default function MobileHeader() {
             />
           </svg>
         </symbol>
+        <symbol>
+          <svg
+            id="cancele"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </symbol>
       </svg>
 
       <div className=" flex md:hidden items-center justify-between h-16 px-5 bg-white dark:bg-zinc-700">
         {/* nav icon */}
-        <div onClick={() => setIsOpen(true)}>
+        <div onClick={() => setSidBarIsOpen(true)}>
           <svg className="w-6 h-6">
             <use href="#bars-3"></use>
           </svg>
@@ -92,7 +110,7 @@ export default function MobileHeader() {
         </div>
 
         {/* shop icon */}
-        <div>
+        <div onClick={()=>setShopMenuIsOpen(true)}>
           <svg className="w-6 h-6">
             <use href="#shop"></use>
           </svg>
@@ -101,7 +119,7 @@ export default function MobileHeader() {
         {/*header menu */}
         <div
           className={`w-64 fixed min-h-screen top-0 right-0 bottom-0 px-4 bg-white dark:bg-zinc-700 transition-all z-20 ${
-            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            sidBarIsOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
           <div className="flex justify-between items-center pt-3 pb-5 border-b border-b-gray-300">
@@ -126,22 +144,9 @@ export default function MobileHeader() {
               </svg>
             </div>
             {/* close menu */}
-            <div onClick={()=>setIsOpen(false)}>
+            <div onClick={() => setSidBarIsOpen(false)}>
               <svg className="h-5 w-5 dark:text-white">
-                <svg
-                  id="cancele"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18 18 6M6 6l12 12"
-                  />
-                </svg>
+                <use href="#cancele"></use>
               </svg>
             </div>
           </div>
@@ -212,7 +217,53 @@ export default function MobileHeader() {
           </div>
         </div>
 
-        <div className={`md:hidden fixed w-full h-full bg-black/30 z-10 inset-0 transition-all ${isOpen ? 'visible opacity-100' : 'opacity-0 invisible'}`}></div>
+        {/* /////////////////////////// */}
+
+        {/* shop menu */}
+
+        <div className={`w-64 fixed flex flex-col min-h-screen top-0 left-0 bottom-0 pt-5 px-4 bg-white dark:bg-zinc-700 transition-all z-20 ${shopMenuIsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+          {/* header shop menu */}
+          <div className="flex items-center justify-between pb-5 text-gray-500 border-b border-b-gray-300">
+            <svg className="w-6 h-6" onClick={()=>setShopMenuIsOpen(false)}>
+              <use href="#cancele"></use>
+            </svg>
+            <span>سبد خرید</span>
+          </div>
+
+          {/* main shop menu */}
+          <div className="">
+            {/* <ShopCard /> */}
+            <ShopCard />
+
+
+            {/* shop card footer */}
+            <div className="flex justify-between items-center mt-5">
+              <div>
+                <span className="text-gray-400 dark:text-emerald-500 text-sm">
+                  مبلغ قابل پرداخت
+                </span>
+                <div className="text-zinc-700 dark:text-white text-xl">
+                  350.000
+                  <span className="text-sm mr-1">تومان</span>
+                </div>
+              </div>
+              <div>
+                <a
+                  href=""
+                  className="p-2 bg-teal-600 dark:bg-emerald-500 hover:bg-teal-700 dark:hover:bg-teal-700 transition-colors text-white rounded-xl "
+                >
+                  ثبت سفارش
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`md:hidden fixed w-full h-full bg-black/30 z-10 inset-0 transition-all ${
+            shopMenuIsOpen || sidBarIsOpen ? "visible opacity-100" : "opacity-0 invisible"
+          }`}
+        ></div>
       </div>
     </>
   );
