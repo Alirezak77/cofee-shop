@@ -1,4 +1,5 @@
 import React from "react";
+import ProductBox from "../Product-box/ProductBox";
 
 export default function Products() {
   return (
@@ -14,8 +15,8 @@ export default function Products() {
     <section className="product bg-product-img bg-no-repeat h-[900px]">
       <div className="container">
         <div className="flex items-center justify-between mt-10">
-          <div className="font-laleZar flex flex-col gap-y-2">
-            <h3 className="font-bold text-2xl">جدید ترین محصولات</h3>
+          <div className="font-laleZar flex flex-col gap-y-2 dark:text-white">
+            <h3 className="font-bold text-2xl ">جدید ترین محصولات</h3>
             <p className="text-xl">فراوری شده با دان قهوه</p>
           </div>
           <div className="flex items-center text-orange-300">
@@ -24,6 +25,14 @@ export default function Products() {
                 <use href="#arrow-left"></use>
             </svg>
           </div>
+        </div>
+        <div className="grid grid-cols-4 gap-3">
+        <ProductBox/>
+        <ProductBox/>
+        <ProductBox/>
+        <ProductBox/>
+        <ProductBox/>
+
         </div>
       </div>
     </section>
