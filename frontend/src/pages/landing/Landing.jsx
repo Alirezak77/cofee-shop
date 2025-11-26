@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../Components/Header/Header.jsx'
+import Products from '../../Components/Products/Products.jsx'
 
 export default function Landing() {
   return (
@@ -29,6 +30,7 @@ export default function Landing() {
             </div>
         </div>
       </section>
+      <Products/>
     </main>
     </>
   )

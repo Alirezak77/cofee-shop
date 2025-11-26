@@ -32,7 +32,8 @@ module.exports= {
       },
       backgroundImage: {
         'desktop-img' : 'url(/images/headerBgDesktop.webp)',
-        'mobile-img' : 'url(/images/headerBgMobile.webp)'
+        'mobile-img' : 'url(/images/headerBgMobile.webp)',
+        'product-img' : 'url(/images/body-bg.png)'
       },
 
       container : {
