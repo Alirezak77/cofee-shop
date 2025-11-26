@@ -3,17 +3,7 @@ import MobileHeader from "./MobileHeader";
 import { toggleTheme } from "../../utils/theme";
 
 export default function Header() {
-  // const darkMode = () => {
-  //   const html = document.documentElement;
 
-  //   if (html.classList.contains("dark")) {
-  //     html.classList.remove("dark");
-  //     localStorage.setItem("theme", "light");
-  //   } else {
-  //     html.classList.add("dark");
-  //     localStorage.setItem("theme", "dark");
-  //   }
-  // };
 
   return (
     <>
@@ -117,7 +107,7 @@ export default function Header() {
         </symbol>
       </svg>
 
-      <header className="bg-black/50 fixed top-5 right-0 left-0 hidden md:flex w-[98%] lg:w-[90%] h-24 px-5 lg:px-10 py-5 mx-auto rounded-3xl items-center backdrop-blur-sm">
+      <header className="bg-black/50 fixed top-5 right-0 left-0 hidden md:flex w-[98%] lg:w-[90%] h-24 px-5 z-20 lg:px-10 py-5 mx-auto rounded-3xl items-center backdrop-blur-sm">
         <div className="flex justify-between items-center w-full">
           {/* logo and menu */}
           <nav className="flex h-14 gap-x-5 text-sm lg:gap-x-9 items-center lg:text-xl text-gray-300 tracking-tightest">

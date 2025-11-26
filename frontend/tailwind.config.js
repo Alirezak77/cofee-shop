@@ -30,6 +30,10 @@ module.exports= {
       letterSpacing:{
         "tightest" : "-0.065em"
       },
+      backgroundImage: {
+        'desktop-img' : 'url(/images/headerBgDesktop.webp)',
+        'mobile-img' : 'url(/images/headerBgMobile.webp)'
+      },
 
       container : {
         center : true,

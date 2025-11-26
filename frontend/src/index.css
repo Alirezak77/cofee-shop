@@ -27,8 +27,8 @@
 
   body{
   direction: rtl;
-  background-image: url("/images/headerBgDesktop.webp");
+  /* background-image: url("/images/headerBgDesktop.webp");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 }
