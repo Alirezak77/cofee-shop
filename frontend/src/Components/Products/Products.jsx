@@ -33,8 +33,8 @@ export default function Products() {
         <ProductBox/>
         <ProductBox/>
         </div>
-        <div className="flex gap-x-4 mt-20">
-            <div className="relative">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-x-4 mt-20 ">
+            <div className="relative my-5">
                 <div class="relative w-full h-64 rounded-xl  overflow-hidden">
   
                     <img src="/images/categories/category-right.jpg" class="w-full h-full object-cover" />
