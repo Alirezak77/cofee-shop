@@ -32,7 +32,29 @@ export default function Products() {
         <ProductBox/>
         <ProductBox/>
         <ProductBox/>
+        </div>
+        <div className="flex gap-x-4 mt-20">
+            <div className="relative">
+                <div class="relative w-full h-64 rounded-xl  overflow-hidden">
+  
+                    <img src="/images/categories/category-right.jpg" class="w-full h-full object-cover" />
+                     <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                
+                <h2 className="text-3xl absolute top-[40%] right-10 text-white font-bold">انواع قهوه</h2>
+                <p className="text-white absolute top-[60%] right-10 text-xl">ترکیبی و تک خاستگاه</p>
+            </div>
+            <div className="relative">
+                <div class="relative w-full h-64 rounded-xl  overflow-hidden">
+  
+                    <img src="/images/categories/category-left.jpg" class="w-full h-full object-cover" />
 
+  
+                     <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                <h2 className="text-3xl absolute top-[40%] right-10 text-white font-bold">پودر های فوری</h2>
+                <p className="text-white absolute top-[60%] right-10 text-xl">نسکافه،هات چاکلت،ماسالا</p>
+            </div>
         </div>
       </div>
     </section>
