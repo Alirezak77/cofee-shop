@@ -1,5 +1,6 @@
 import React from "react";
 import ProductBox from "../Product-box/ProductBox";
+import ProductCategory from "../Product-category/ProductCategory";
 
 export default function Products() {
   return (
@@ -55,6 +56,14 @@ export default function Products() {
                 <h2 className="text-3xl absolute top-[40%] right-10 text-white font-bold">پودر های فوری</h2>
                 <p className="text-white absolute top-[60%] right-10 text-xl">نسکافه،هات چاکلت،ماسالا</p>
             </div>
+        </div>
+        <div className="my-8 flex flex-wrap items-center justify-center gap-y-6 gap-x-7 md:gap-[65px]">
+        <ProductCategory/>
+        <ProductCategory/>
+        <ProductCategory/>
+        <ProductCategory/>
+        <ProductCategory/>
+
         </div>
       </div>
     </section>
